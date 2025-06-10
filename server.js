@@ -9,7 +9,6 @@ const PORT = process.env.PORT || 8000;
 app.use(cors());
 app.use(express.json());
 
-
 mongoose.connect(process.env.MONGO_URL)
   .then(() => console.log("MongoDB Atlas connected"))
   .catch(err => console.log(err));
