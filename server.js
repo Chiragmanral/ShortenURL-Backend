@@ -17,7 +17,8 @@ mongoose.connect(process.env.MONGO_URL)
 const urlSchema = new mongoose.Schema({
   shortId: {
     type : String,
-    required : true
+    required : true,
+    unique : true
   },
   redirectURL: {
     type : String,
@@ -35,7 +36,8 @@ const URL = mongoose.model("URL", urlSchema);
 const userSchema = mongoose.Schema({
     email : {
         type : String,
-        required : true
+        required : true,
+        unique : true
     },
     password : {
         type : String,
